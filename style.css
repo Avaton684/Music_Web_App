@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+
+
+/* 1. The entire scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+    /* Width for vertical scrollbar */
+    height: 10px;
+    /* Height for horizontal scrollbar */
+}
+
+/* 2. The background (track) */
+::-webkit-scrollbar-track {
+    background: #202124;
+    /* Match your Dark Mode background */
+    border-radius: 10px;
+}
+
+/* 3. The draggable part (thumb) */
+::-webkit-scrollbar-thumb {
+    background: #828284;
+    /* Match your slider/circle color */
+    border-radius: 10px;
+    border: 2px solid #202124;
+    /* Creates a padding effect around the thumb */
+}
+
+/* 4. Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5f6368;
+}
+
+
+
+
+
+.container {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    border: 2px solid black;
+    background-image: url(purpleblack.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .container img{
+    object-fit: fill;
+} */
+.container div {
+    padding: 0.4rem;
+}
+
+.buttons {
+    display: flex;
+    height: 58px;
+    margin: -15px;
+}
+
+.playbar {
+    height: 8vh;
+    width: 94%;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    position: relative;
+    top: 89%;
+    margin-left: 32px;
+    background-color: #92929254;
+    border-radius: 20px;
+    border: none;
+    box-shadow: inset 0px 0px 20px 7px rgba(7, 7, 7, 0.16);
+}
+
+.previous,
+.play,
+.next {
+    background: transparent;
+    fill: white;
+    border: none;
+    font-size: 50px;
+}
+
+.divContainer {
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 400px;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+
+.divContainer div {
+    margin: 10px;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #92929254;
+    ;
+    border: none;
+    box-shadow: inset 0px 0px 20px 7px rgba(7, 7, 7, 0.16);
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.divContainer span:nth-child(2) {
+    margin-left: 170px;
+}
+
+.songinfo {
+    position: fixed;
+    left: 45px;
+    bottom: 32px;
+    font-size: 20px;
+}
+
+.seekbar {
+    width: 95%;
+    height: 0;
+    /* Change this to make it thicker */
+    background-color: white;
+    /* Use background instead of border */
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+    bottom: 35px;
+}
+
+.circle {
+    height: 1px;
+    width: 1px;
+    background-color: red;
+    position: relative;
+    bottom: 7px;
+    right: 7px;
+    border-radius: 10px;
+}
+
+.time {
+    position: relative;
+    left: 41rem;
+    bottom: 35px;
+    font-size: 20px;
+}
+
+.songPoster {
+    height: 67vh;
+    width: 53vw;
+    /* border: 2px solid black; */
+    position: relative;
+    left: 30%;
+    bottom: 70%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-video {
+    height: 70vh;
+    width: 60vw;
+    object-fit: cover; /* This prevents the video from looking squashed */
+    border-radius: 8px; /* Optional: adds rounded corners */
+}
